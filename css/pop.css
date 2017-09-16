@@ -1,0 +1,196 @@
+body,div,h3,span {
+  margin: 0;
+  padding: 0;
+}
+
+/*dialog对话框*/
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.15);
+}
+
+.dialog-container {
+  width:250px;  
+  border-radius: 5px;
+  box-shadow: 0 0 10px #bbb;
+  background: #fff;
+  font-family:'微软雅黑';
+  padding: 15px;  
+  position: fixed;
+  z-index: 9999;
+  animation: slideToDown .5s ease-in forwards;  
+}
+
+.slideToDown {
+  animation: slideToDown .5s ease-in forwards;
+}
+
+.slideToUp {
+  animation: slideToUp .5s ease-in forwards;
+}
+
+.dialog-title {
+  border-bottom: 2px dashed #bbb; 
+  padding-bottom: 5px;
+}
+
+.dialog-title h3, .dialog-title span{
+  display: inline-block;
+}
+
+.dialog-title span {
+  float: right;
+  cursor: pointer;
+}
+
+.dialog-content {
+  padding-top: 15px;
+  
+  min-height:80px;
+}
+
+.dialog-btn {
+  box-sizing: border-box;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.dialog-btn-confirm, .dialog-btn-cancle {
+  display: inline-block; 
+  width: 80px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background: #66be8c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog-btn-cancle {
+  float: right;
+  background: #ddd;
+}
+
+.dialog-btn-confirm:hover {
+  background: #58B781;
+}
+
+.dialog-btn-cancle:hover {
+  background: #d6d6d6;
+}
+
+/* alert提示框 */
+.alert-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.15);
+}
+
+.alert-container {
+  width:250px;  
+  border-radius: 5px;
+  box-shadow: 0 0 10px #bbb;
+  background: #fff;
+  font-family:'微软雅黑';
+  padding: 15px;  
+  position: fixed;
+  z-index: 9999;
+  animation: slideToDown .4s ease-in forwards;  
+}
+
+.slideToDown {
+  animation: slideToDown .4s ease-in forwards;
+}
+
+.slideToUp {
+  animation: slideToUp .4s ease-in forwards;
+}
+
+.alert-title {
+  border-bottom: 2px dashed #bbb; 
+  padding-bottom: 5px;
+}
+
+.alert-title h3, .alert-title span{
+  display: inline-block;
+}
+
+.alert-title span {
+  float: right;
+  cursor: pointer;
+}
+
+.alert-content {
+  padding-top: 10px;
+  line-height: 1.5;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  min-height:80px;
+  word-wrap: break-word;
+}
+
+.alert-btn {
+  box-sizing: border-box;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.alert-btn-confirm{
+  display: block; 
+  width: 80px;
+  margin: 0 auto;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background: #66be8c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert-btn-confirm:hover {
+  background: #58B781;
+}
+
+.alert-btn-cancle:hover {
+  background: #d6d6d6;
+}
+
+@keyframes slideToDown {
+  0% {    
+    top: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@keyframes slideToUp {
+  0% {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   opacity: 1;
+  }
+  
+  100% {
+    top: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,-50%);    
+  }
+}
